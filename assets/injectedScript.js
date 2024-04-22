@@ -1,38 +1,28 @@
-document.addEventListener("DOMContentLoaded", function () {
-  changeTitle();
-  var buttons = document.getElementsByClassName("btXcFQ");
-  for (var i = 0; i < buttons.length; i++) {
-    var button = buttons[i];
-    button.style.backgroundColor = "#FFA500";
-  }
-  console.log("loaded after dom loaded", elements, buttons);
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   changeTitle();
+//   var buttons = document.getElementsByClassName("btXcFQ");
+//   for (var i = 0; i < buttons.length; i++) {
+//     var button = buttons[i];
+//     button.style.backgroundColor = "#FFA500";
+//   }
+//   console.log("loaded after dom loaded", elements, buttons);
+// });
 
 function changeTitle() {
   var elements = document.getElementsByClassName("hykaXs");
   elements[0].textContent = "injected";
 }
 
-// setTimeout(function () {
-//   // Your code to modify DOM elements here
-//   var elements = document.getElementsByClassName("hykaXs");
-
-//   for (var i = 0; i < elements.length; i++) {
-//     var element = elements[i];
-//     // Do something with each element, for example:
-//     element.style.color = "red";
-//     //   element.innerHTML = "injected";
-//     element.textContent = "injected";
-//     //   element.innerHTML = "injected";
-//     //   element.innerText = "injected";
-//   }
-//   var buttons = document.getElementsByClassName("btXcFQ");
-//   for (var i = 0; i < buttons.length; i++) {
-//     var button = buttons[i];
-//     button.style.backgroundColor = "#FFA500";
-//   }
-//   console.log("loaded after timeout", elements, buttons);
-// }, 1000); // Wait for 1 second before executing
+setTimeout(function () {
+  // Your code to modify DOM elements here
+  changeTitle();
+  var buttons = document.getElementsByClassName("btXcFQ");
+  for (var i = 0; i < buttons.length; i++) {
+    var button = buttons[i];
+    button.style.backgroundColor = "#FFA500";
+  }
+  console.log("loaded after timeout", elements, buttons);
+}, 1000); // Wait for 1 second before executing
 
 // var elements = document.getElementsByClassName("hykaXs");
 // // console.log(element.textContent);
