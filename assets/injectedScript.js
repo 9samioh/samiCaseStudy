@@ -43,7 +43,7 @@ for (var i = 0; i < elements2.length; i++) {
   // Print a message to the browser console
   console.log(
     "Hello, world! This message is printed from injected JavaScript file.",
-    elements,
+    // elements,
     elements2
   );
 })();
