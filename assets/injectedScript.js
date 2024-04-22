@@ -11,7 +11,8 @@ for (var i = 0; i < elements.length; i++) {
 (function () {
   // Print a message to the browser console
   console.log(
-    "Hello, world! This message is printed from injected JavaScript file."
+    "Hello, world! This message is printed from injected JavaScript file.",
+    elements
   );
 })();
 
@@ -19,10 +20,10 @@ for (var i = 0; i < elements.length; i++) {
 //   element.textContent = "Modified content";
 // }
 
-var element2 = document.getElementById("hykaXs");
-console.log(element2.textContent);
-console.log("hello2");
+// var element2 = document.getElementById("hykaXs");
+// console.log(element2.textContent);
+// console.log("hello2");
 
-if (element2) {
-  element2.textContent = "Modified content";
-}
+// if (element2) {
+//   element2.textContent = "Modified content";
+// }
