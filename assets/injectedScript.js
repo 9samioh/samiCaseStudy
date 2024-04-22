@@ -11,6 +11,12 @@ window.onload = function () {
     //   element.innerHTML = "injected";
     //   element.innerText = "injected";
   }
+  var buttons = document.getElementsByClassName("btXcFQ");
+  for (var i = 0; i < buttons.length; i++) {
+    var button = buttons[i];
+    button.style.backgroundColor = "#FFA500";
+  }
+  console.log("loaded now", elements, buttons);
 };
 
 // var elements = document.getElementsByClassName("hykaXs");
