@@ -4,7 +4,7 @@
 
 setTimeout(function () {
   // Your code to modify DOM elements here
-  if (isMobileScreen) {
+  if (window.innerWidth < 500) {
     changeTitle();
     changeButton();
   }
@@ -18,7 +18,7 @@ function changeTitle() {
   var title1 = document.getElementsByClassName("hykaXs");
   title1[0].textContent = "";
 
-  var title2 = document.getElementsByClassName(".hVhTzB");
+  var title2 = document.getElementsByClassName("hVhTzB");
   console.log(title2, "window size: ", window.innerWidth);
 
   title2[0].textContent = "User " + title2[0].textContent;
