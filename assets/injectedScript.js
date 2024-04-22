@@ -1,72 +1,31 @@
+// i needed to make changes after the dom has already loaded, this function didn't work so my workaround was doing a timeout
 // document.addEventListener("DOMContentLoaded", function () {
-//   changeTitle();
-//   var buttons = document.getElementsByClassName("btXcFQ");
-//   for (var i = 0; i < buttons.length; i++) {
-//     var button = buttons[i];
-//     button.style.backgroundColor = "#FFA500";
-//   }
-//   console.log("loaded after dom loaded", elements, buttons);
 // });
-
-function changeTitle() {
-  var elements = document.getElementsByClassName("hykaXs");
-  elements[0].textContent = "injected";
-}
 
 setTimeout(function () {
   // Your code to modify DOM elements here
-  changeTitle();
+  if (isMobileScreen) {
+    changeTitle();
+    changeButton();
+  }
+}, 1000); // Wait for 1 second before executing
+
+function isMobileScreen() {
+  return window.innerWidth < 500;
+}
+
+function changeTitle() {
+  var elements = document.getElementsByClassName("hykaXs");
+  elements[0].textContent = "";
+
+  elements = document.getElementsByClassName(".hVhTzB");
+  elements[0].textContent = "User " + elements[0].textContent;
+}
+
+function changeButton() {
   var buttons = document.getElementsByClassName("btXcFQ");
   for (var i = 0; i < buttons.length; i++) {
     var button = buttons[i];
     button.style.backgroundColor = "#FFA500";
   }
-  console.log("loaded after timeout", elements, buttons);
-}, 1000); // Wait for 1 second before executing
-
-// var elements = document.getElementsByClassName("hykaXs");
-// // console.log(element.textContent);
-// console.log("hello");
-
-// for (var i = 0; i < elements.length; i++) {
-//   var element = elements[i];
-//   // Do something with each element, for example:
-//   element.style.color = "red";
-//   //   element.innerHTML = "injected";
-//   element.textContent = "injected";
-//   element.innerHTML = "injected";
-//   element.innerText = "injected";
-// }
-
-var elements2 = document.getElementsByClassName("sc-hLQSwg hykaXs header");
-
-for (var i = 0; i < elements2.length; i++) {
-  var element2 = elements[i];
-  // Do something with each element, for example:
-  element2.style.color = "red";
-  //   element.innerHTML = "injected";
-  element2.textContent = "injected";
-  //   element.innerHTML = "injected";
-  element2.innerText = "injected";
 }
-
-(function () {
-  // Print a message to the browser console
-  console.log(
-    "Hello, world! This message is printed from injected JavaScript file.",
-    // elements,
-    elements2
-  );
-})();
-
-// if (element) {
-//   element.textContent = "Modified content";
-// }
-
-// var element2 = document.getElementById("hykaXs");
-// console.log(element2.textContent);
-// console.log("hello2");
-
-// if (element2) {
-//   element2.textContent = "Modified content";
-// }
