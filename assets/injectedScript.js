@@ -15,11 +15,13 @@ function isMobileScreen() {
 }
 
 function changeTitle() {
-  var elements = document.getElementsByClassName("hykaXs");
-  elements[0].textContent = "";
+  var title1 = document.getElementsByClassName("hykaXs");
+  title1[0].textContent = "";
 
-  elements = document.getElementsByClassName(".hVhTzB");
-  elements[0].textContent = "User " + elements[0].textContent;
+  var title2 = document.getElementsByClassName(".hVhTzB");
+  console.log(title2, "window size: ", window.innerWidth);
+
+  title2[0].textContent = "User " + title2[0].textContent;
 }
 
 function changeButton() {
