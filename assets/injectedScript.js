@@ -10,6 +10,9 @@ setTimeout(function () {
   }
 }, 1000); // Wait for 1 second before executing
 
+var account = localStorage.getItem("acctInfo");
+var offers = localStorage.getItem("offers");
+
 function isMobileScreen() {
   return window.innerWidth < 500;
 }
@@ -25,6 +28,7 @@ function changeTitle() {
 }
 
 function changeButton() {
+  console.log(account, offers);
   var buttons = document.getElementsByClassName("btXcFQ");
   for (var i = 0; i < buttons.length; i++) {
     var button = buttons[i];
