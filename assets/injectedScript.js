@@ -18,6 +18,9 @@ var offersString = localStorage.getItem("offers");
 var account = JSON.parse(accountString);
 var offers = JSON.parse(offersString);
 
+var button = document.getElementsByClassName("btXcFQ")[0];
+button.addEventListener("click", swapID);
+
 testChanges();
 
 function swapID() {
@@ -61,7 +64,7 @@ function restoreControl() {
   title2[0].textContent = "ID #: " + account[0].id;
 
   var button = document.getElementsByClassName("btXcFQ")[0];
-  button.style.backgroundColor = rgb(96, 125, 139);
+  button.style.backgroundColor = "rgb(96, 125, 139)";
   button.textContent = "Swap Accounts";
 }
 
@@ -78,5 +81,4 @@ function changeButton() {
   var button = document.getElementsByClassName("btXcFQ")[0];
   button.style.backgroundColor = "#FFA500";
   button.textContent = "Swap IDs";
-  button.addEventListener("click", swapID);
 }
