@@ -8,6 +8,8 @@ for (var i = 0; i < elements.length; i++) {
   element.style.color = "red";
   //   element.innerHTML = "injected";
   element.textContent = "injected";
+  //   element.innerHTML = "injected";
+  element.innerText = "injected";
 }
 
 (function () {
