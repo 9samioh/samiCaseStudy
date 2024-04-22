@@ -27,7 +27,9 @@ requestAnimationFrame(() => {
     var button = document.getElementsByClassName("btXcFQ")[0];
     button.addEventListener("click", swapID);
 
-    testChanges();
+    if (account[0].id % 2 == 0) {
+      testChanges();
+    }
   });
 });
 
@@ -42,17 +44,17 @@ function swapID() {
   account = JSON.parse(accountString);
   offers = JSON.parse(offersString);
 
-  testChanges();
+  if (account[0].id % 2 == 0) {
+    testChanges();
+  } else {
+    restoreControl();
+  }
 }
 
 function testChanges() {
   if (window.innerWidth < 500) {
-    if (account[0].id % 2 == 0) {
-      changeTitle();
-      changeButton();
-    } else {
-      restoreControl();
-    }
+    changeTitle();
+    changeButton();
   }
 }
 
