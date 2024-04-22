@@ -9,7 +9,6 @@
 //     changeButton();
 //   }
 // }, 1000); // Wait for 1 second before executing
-
 // retrieving string representations of local storage
 var accountString = localStorage.getItem("acctInfo");
 var offersString = localStorage.getItem("offers");
@@ -18,10 +17,19 @@ var offersString = localStorage.getItem("offers");
 var account = JSON.parse(accountString);
 var offers = JSON.parse(offersString);
 
-var button = document.getElementsByClassName("btXcFQ")[0];
-button.addEventListener("click", swapID);
+requestAnimationFrame(() => {
+  // fires before next repaint
 
-testChanges();
+  requestAnimationFrame(() => {
+    // fires before the _next_ next repaint
+    // ...which is effectively _after_ the next repaint
+
+    var button = document.getElementsByClassName("btXcFQ")[0];
+    button.addEventListener("click", swapID);
+
+    testChanges();
+  });
+});
 
 function swapID() {
   console.log("swapping ids");
@@ -38,22 +46,14 @@ function swapID() {
 }
 
 function testChanges() {
-  requestAnimationFrame(() => {
-    // fires before next repaint
-
-    requestAnimationFrame(() => {
-      // fires before the _next_ next repaint
-      // ...which is effectively _after_ the next repaint
-      if (window.innerWidth < 500) {
-        if (account[0].id % 2 == 0) {
-          changeTitle();
-          changeButton();
-        } else {
-          restoreControl();
-        }
-      }
-    });
-  });
+  if (window.innerWidth < 500) {
+    if (account[0].id % 2 == 0) {
+      changeTitle();
+      changeButton();
+    } else {
+      restoreControl();
+    }
+  }
 }
 
 function restoreControl() {
