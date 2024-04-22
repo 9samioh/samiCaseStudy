@@ -10,29 +10,34 @@
 //   }
 // }, 1000); // Wait for 1 second before executing
 
-// retrieving string representations of local storage
-var accountString = localStorage.getItem("acctInfo");
-var offersString = localStorage.getItem("offers");
+(function loadApp() {
+  // retrieving string representations of local storage
+  var accountString = localStorage.getItem("acctInfo");
+  var offersString = localStorage.getItem("offers");
 
-// parsing the string to a JSON object
-var account = JSON.parse(accountString);
-var offers = JSON.parse(offersString);
+  // parsing the string to a JSON object
+  var account = JSON.parse(accountString);
+  var offers = JSON.parse(offersString);
+  testChanges();
 
-console.log("account ", account);
+  console.log("loading app with account: ", account);
+})();
 
-requestAnimationFrame(() => {
-  // fires before next repaint
-
+function testChanges() {
   requestAnimationFrame(() => {
-    // fires before the _next_ next repaint
-    // ...which is effectively _after_ the next repaint
+    // fires before next repaint
 
-    if (window.innerWidth < 500 && account[0].id % 2 == 0) {
-      changeTitle();
-      changeButton();
-    }
+    requestAnimationFrame(() => {
+      // fires before the _next_ next repaint
+      // ...which is effectively _after_ the next repaint
+
+      if (window.innerWidth < 500 && account[0].id % 2 == 0) {
+        changeTitle();
+        changeButton();
+      }
+    });
   });
-});
+}
 
 function isMobileScreen() {
   return window.innerWidth < 500;
@@ -43,17 +48,15 @@ function changeTitle() {
   title1[0].textContent = "";
 
   var title2 = document.getElementsByClassName("hVhTzB");
-  console.log(title2, "window size: ", window.innerWidth, account, account.id);
+  //   console.log(title2, "window size: ", window.innerWidth, account, account.id);
 
   title2[0].textContent = "User ID: #" + account[0].id;
 }
 
 function changeButton() {
-  console.log(account, offers);
-  var buttons = document.getElementsByClassName("btXcFQ");
-  for (var i = 0; i < buttons.length; i++) {
-    var button = buttons[i];
-    button.style.backgroundColor = "#FFA500";
-    button.textContent = "Swap IDs";
-  }
+  //   console.log(account, offers);
+  var button = document.getElementsByClassName("btXcFQ")[0];
+  button.style.backgroundColor = "#FFA500";
+  button.textContent = "Swap IDs";
+  button.addEventListener("click", loadApp);
 }
