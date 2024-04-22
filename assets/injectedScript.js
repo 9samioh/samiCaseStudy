@@ -5,7 +5,7 @@
 setTimeout(function () {
   // Your code to modify DOM elements here
   if (window.innerWidth < 500) {
-    changeTitle();
+    // changeTitle();
     changeButton();
   }
 }, 1000); // Wait for 1 second before executing
