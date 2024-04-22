@@ -10,18 +10,29 @@
 //   }
 // }, 1000); // Wait for 1 second before executing
 
-(function loadApp() {
+// retrieving string representations of local storage
+var accountString = localStorage.getItem("acctInfo");
+var offersString = localStorage.getItem("offers");
+
+// parsing the string to a JSON object
+var account = JSON.parse(accountString);
+var offers = JSON.parse(offersString);
+
+testChanges();
+
+function swapID() {
+  console.log("swapping ids");
+
   // retrieving string representations of local storage
-  var accountString = localStorage.getItem("acctInfo");
-  var offersString = localStorage.getItem("offers");
+  accountString = localStorage.getItem("acctInfo");
+  offersString = localStorage.getItem("offers");
 
   // parsing the string to a JSON object
-  var account = JSON.parse(accountString);
-  var offers = JSON.parse(offersString);
-  testChanges();
+  account = JSON.parse(accountString);
+  offers = JSON.parse(offersString);
 
-  console.log("loading app with account: ", account);
-})();
+  testChanges();
+}
 
 function testChanges() {
   requestAnimationFrame(() => {
@@ -58,5 +69,5 @@ function changeButton() {
   var button = document.getElementsByClassName("btXcFQ")[0];
   button.style.backgroundColor = "#FFA500";
   button.textContent = "Swap IDs";
-  button.addEventListener("click", loadApp);
+  button.addEventListener("click", swapID);
 }
