@@ -41,17 +41,28 @@ function testChanges() {
     requestAnimationFrame(() => {
       // fires before the _next_ next repaint
       // ...which is effectively _after_ the next repaint
-
-      if (window.innerWidth < 500 && account[0].id % 2 == 0) {
-        changeTitle();
-        changeButton();
+      if (window.innerWidth < 500) {
+        if (account[0].id % 2 == 0) {
+          changeTitle();
+          changeButton();
+        } else {
+          restoreControl();
+        }
       }
     });
   });
 }
 
-function isMobileScreen() {
-  return window.innerWidth < 500;
+function restoreControl() {
+  var title1 = document.getElementsByClassName("hykaXs");
+  title1[0].textContent = "Welcome User";
+
+  var title2 = document.getElementsByClassName("hVhTzB");
+  title2[0].textContent = "ID #: " + account[0].id;
+
+  var button = document.getElementsByClassName("btXcFQ")[0];
+  button.style.backgroundColor = rgb(96, 125, 139);
+  button.textContent = "Swap Accounts";
 }
 
 function changeTitle() {
@@ -59,8 +70,6 @@ function changeTitle() {
   title1[0].textContent = "";
 
   var title2 = document.getElementsByClassName("hVhTzB");
-  //   console.log(title2, "window size: ", window.innerWidth, account, account.id);
-
   title2[0].textContent = "User ID: #" + account[0].id;
 }
 
