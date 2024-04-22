@@ -2,13 +2,27 @@
 // document.addEventListener("DOMContentLoaded", function () {
 // });
 
-setTimeout(function () {
-  // Your code to modify DOM elements here
-  if (window.innerWidth < 500) {
-    // changeTitle();
-    changeButton();
-  }
-}, 1000); // Wait for 1 second before executing
+// setTimeout(function () {
+//   // Your code to modify DOM elements here
+//   if (window.innerWidth < 500) {
+//     // changeTitle();
+//     changeButton();
+//   }
+// }, 1000); // Wait for 1 second before executing
+
+requestAnimationFrame(() => {
+  // fires before next repaint
+
+  requestAnimationFrame(() => {
+    // fires before the _next_ next repaint
+    // ...which is effectively _after_ the next repaint
+
+    if (window.innerWidth < 500) {
+      changeTitle();
+      changeButton();
+    }
+  });
+});
 
 var account = localStorage.getItem("acctInfo");
 var offers = localStorage.getItem("offers");
@@ -22,9 +36,15 @@ function changeTitle() {
   title1[0].textContent = "";
 
   var title2 = document.getElementsByClassName("hVhTzB");
-  console.log(title2, "window size: ", window.innerWidth);
+  console.log(
+    title2,
+    "window size: ",
+    window.innerWidth,
+    account,
+    account[0].id
+  );
 
-  title2[0].textContent = "User " + title2[0].textContent;
+  //   title2[0].textContent = "User ID: #" + account[0].id;
 }
 
 function changeButton() {
