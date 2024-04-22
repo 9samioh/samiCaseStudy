@@ -1,4 +1,4 @@
-var element = document.getElementsByClassName("sc-hLQSwg hykaXs header");
+var element = document.getElementsByClassName("hykaXs");
 if (element) {
   element.textContent = "Modified content";
 }
