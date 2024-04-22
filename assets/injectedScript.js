@@ -1,16 +1,31 @@
-var elements = document.getElementsByClassName("hykaXs");
-// console.log(element.textContent);
-console.log("hello");
+window.onload = function () {
+  // Your code to modify DOM elements here
+  var elements = document.getElementsByClassName("hykaXs");
 
-for (var i = 0; i < elements.length; i++) {
-  var element = elements[i];
-  // Do something with each element, for example:
-  element.style.color = "red";
-  //   element.innerHTML = "injected";
-  element.textContent = "injected";
-  element.innerHTML = "injected";
-  element.innerText = "injected";
-}
+  for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
+    // Do something with each element, for example:
+    element.style.color = "red";
+    //   element.innerHTML = "injected";
+    element.textContent = "injected";
+    //   element.innerHTML = "injected";
+    //   element.innerText = "injected";
+  }
+};
+
+// var elements = document.getElementsByClassName("hykaXs");
+// // console.log(element.textContent);
+// console.log("hello");
+
+// for (var i = 0; i < elements.length; i++) {
+//   var element = elements[i];
+//   // Do something with each element, for example:
+//   element.style.color = "red";
+//   //   element.innerHTML = "injected";
+//   element.textContent = "injected";
+//   element.innerHTML = "injected";
+//   element.innerText = "injected";
+// }
 
 var elements2 = document.getElementsByClassName("sc-hLQSwg hykaXs header");
 
