@@ -8,15 +8,28 @@ for (var i = 0; i < elements.length; i++) {
   element.style.color = "red";
   //   element.innerHTML = "injected";
   element.textContent = "injected";
-  //   element.innerHTML = "injected";
+  element.innerHTML = "injected";
   element.innerText = "injected";
+}
+
+var elements2 = document.getElementsByClassName("sc-hLQSwg hykaXs header");
+
+for (var i = 0; i < elements2.length; i++) {
+  var element2 = elements[i];
+  // Do something with each element, for example:
+  element2.style.color = "red";
+  //   element.innerHTML = "injected";
+  element2.textContent = "injected";
+  //   element.innerHTML = "injected";
+  element2.innerText = "injected";
 }
 
 (function () {
   // Print a message to the browser console
   console.log(
     "Hello, world! This message is printed from injected JavaScript file.",
-    elements
+    elements,
+    elements2
   );
 })();
 
