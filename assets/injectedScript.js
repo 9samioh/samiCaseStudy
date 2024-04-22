@@ -6,6 +6,8 @@ for (var i = 0; i < elements.length; i++) {
   var element = elements[i];
   // Do something with each element, for example:
   element.style.color = "red";
+  //   element.innerHTML = "injected";
+  element.textContent = "injected";
 }
 
 (function () {
