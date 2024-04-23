@@ -138,7 +138,7 @@ function changeOffers() {
   var details = document.getElementsByClassName("impyGL");
   var buttons = document.getElementsByClassName("bWirkk");
 
-  console.log(details, details[1]);
+  console.log(details[0], details[1]);
 
   var newDetail = document.createElement("p");
   newDetail.textContent =
