@@ -24,23 +24,25 @@ requestAnimationFrame(() => {
   // fires before the _next_ next repaint
   // ...which is effectively _after_ the next repaint
   requestAnimationFrame(() => {
-    // saving this html and styling for control case
-    originalBalance = document.getElementsByClassName("jCqiVJ")[0];
-    originalBalanceHtml = originalBalance.innerHTML;
-    originalBalanceStyle = originalBalance.style.cssText;
+    if (window.innerWidth < 500) {
+      // saving this html and styling for control case
+      originalBalance = document.getElementsByClassName("jCqiVJ")[0];
+      originalBalanceHtml = originalBalance.innerHTML;
+      originalBalanceStyle = originalBalance.style.cssText;
 
-    originalOffers = document.getElementsByClassName("fdlpQJ");
-    originalOfferHtml1 = originalOffers[0].firstChild.innerHTML;
-    originalOfferHtml2 = originalOffers[0].lastChild.innerHTML;
-    originalOfferStyle = originalOffers[0].style.cssText;
+      originalOffers = document.getElementsByClassName("fdlpQJ");
+      originalOfferHtml1 = originalOffers[0].firstChild.innerHTML;
+      originalOfferHtml2 = originalOffers[0].lastChild.innerHTML;
+      originalOfferStyle = originalOffers[0].style.cssText;
 
-    // setting on onClick function for the button, so we know to switch between control and test case
-    var button = document.getElementsByClassName("btXcFQ")[0];
-    button.addEventListener("click", swapID);
+      // setting on onClick function for the button, so we know to switch between control and test case
+      var button = document.getElementsByClassName("btXcFQ")[0];
+      button.addEventListener("click", swapID);
 
-    // if the current id is even, make the changes (need to refresh the first time)
-    if (account[0].id % 2 == 0) {
-      testChanges();
+      // if the current id is even, make the changes (need to refresh the first time)
+      if (account[0].id % 2 == 0) {
+        testChanges();
+      }
     }
   });
 });
@@ -50,13 +52,15 @@ function swapID() {
   // need to wait for account from local storage to update
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
-      accountString = localStorage.getItem("acctInfo");
-      account = JSON.parse(accountString);
+      if (window.innerWidth < 500) {
+        accountString = localStorage.getItem("acctInfo");
+        account = JSON.parse(accountString);
 
-      if (account[0].id % 2 == 0) {
-        testChanges();
-      } else {
-        restoreControl();
+        if (account[0].id % 2 == 0) {
+          testChanges();
+        } else {
+          restoreControl();
+        }
       }
     });
   });
