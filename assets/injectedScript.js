@@ -61,6 +61,7 @@ function testChanges() {
     changeButton();
     hideToggle();
     changeBalance();
+    changeOffers();
   }
 }
 
