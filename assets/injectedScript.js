@@ -87,7 +87,7 @@ function changeTitle() {
 // making change to the swap button
 function changeButton() {
   var button = document.getElementsByClassName("btXcFQ")[0];
-  button.style.backgroundColor = "#FFA500";
+  button.style.backgroundColor = "#F99D34";
   button.textContent = "Swap IDs";
 }
 
@@ -119,7 +119,7 @@ function changeOffers() {
 
   for (var i = 0; i < offers1.length; i++) {
     offers1[i].style.width = "33%";
-    offers1[i].style.backgroundColor = "#ADD8E6";
+    offers1[i].style.backgroundColor = "#ACDACA";
 
     titleDivs[i].style.color = "white";
   }
@@ -146,7 +146,7 @@ function changeOffers() {
     " monthly payment(s) of $" +
     offers[0].amtPerPayment;
   details[0].firstChild.replaceWith(newDetail);
-  buttons[0].firstChild.style.backgroundColor = "#a3b899";
+  buttons[0].style.backgroundColor = "#86B495";
 
   var newDetail2 = document.createElement("p");
   newDetail2.textContent =
@@ -154,7 +154,7 @@ function changeOffers() {
     " monthly payment(s) of $" +
     offers[1].amtPerPayment;
   details[0].lastChild.replaceWith(newDetail2);
-  buttons[0].lastChild.style.backgroundColor = "#a3b899";
+  buttons[1].style.backgroundColor = "#86B495";
 
   //   for (var i = 0; i < details.length; i++) {
   //     var newDetail = document.createElement("p");
