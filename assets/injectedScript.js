@@ -103,8 +103,8 @@ function changeBalance() {
 }
 
 function restoreControl() {
-  original.innerHTML = originalHtml;
-  original.style.cssText = originalStyle;
+  //   original.innerHTML = originalHtml;
+  //   original.style.cssText = originalStyle;
 
   //   var button = document.getElementsByClassName("btXcFQ")[0];
   //   button.addEventListener("click", swapID);
