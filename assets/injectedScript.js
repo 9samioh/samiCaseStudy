@@ -86,11 +86,13 @@ function changeBalance() {
   balanceDiv.style.display = "block";
 
   var balance = document.getElementsByClassName("jCqiVJ")[0];
-  console.log(balance, balance.textContent);
+  console.log(balance, balance.textContent, balance.style);
   balance.textContent = "Balance $" + account[0].balance;
   //   balance.style.display = "flex";
   balance.style.flexDirection = "row";
   balance.style.justifyContent = "flex-end";
+  balance.style.fontSize = "18px";
+  //   balance.style.fontWeight = "600";
 }
 
 function restoreControl() {
