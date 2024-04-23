@@ -87,10 +87,10 @@ function changeBalance() {
 
   var balance = document.getElementsByClassName("jCqiVJ")[0];
   console.log(balance, balance.textContent);
-  balance.style.textContent = "Balance $" + account[0].balance;
+  balance.textContent = "Balance $" + account[0].balance;
   //   balance.style.display = "flex";
   balance.style.flexDirection = "row";
-  balance.style.float = "right";
+  balance.style.justifyContent = "flex-end";
 }
 
 function restoreControl() {
