@@ -119,7 +119,7 @@ function changeOffers() {
 
   for (var i = 0; i < offers1.length; i++) {
     offers1[i].style.width = "33%";
-    offers1[i].style.backgroundColor = "#ACDACA";
+    offers1[i].style.backgroundColor = "#DEEBF1";
 
     titleDivs[i].style.color = "white";
   }
@@ -138,14 +138,14 @@ function changeOffers() {
   var details = document.getElementsByClassName("impyGL");
   var buttons = document.getElementsByClassName("bWirkk");
 
-  console.log(details);
+  console.log(details, details[1]);
 
   var newDetail = document.createElement("p");
   newDetail.textContent =
     offers[0].numOfPayments +
     " monthly payment(s) of $" +
     offers[0].amtPerPayment;
-  details[0].firstChild.replaceWith(newDetail);
+  details[0].replaceWith(newDetail);
   buttons[0].style.backgroundColor = "#86B495";
 
   var newDetail2 = document.createElement("p");
@@ -153,7 +153,7 @@ function changeOffers() {
     offers[1].numOfPayments +
     " monthly payment(s) of $" +
     offers[1].amtPerPayment;
-  details[0].lastChild.replaceWith(newDetail2);
+  details[1].replaceWith(newDetail2);
   buttons[1].style.backgroundColor = "#86B495";
 
   //   for (var i = 0; i < details.length; i++) {
