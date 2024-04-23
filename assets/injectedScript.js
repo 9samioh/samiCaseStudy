@@ -108,6 +108,14 @@ function changeOffers() {
   for (var i = 0; i < offers.length; i++) {
     offers[i].style.width = "33%";
   }
+
+  //   var titleDiv = document.getElementsByClassName("kjJpxs");
+  var titles = document.getElementsByClassName("gBZWha");
+  //   var titles = document.getElementsByClassName("kjJpxs");
+  //   for (var i = 0; i < offers.length; i++) {
+  //     offers[i].textContent = ;
+  //   }
+  console.log(titles);
 }
 
 // restoring original styling for control
