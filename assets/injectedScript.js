@@ -121,8 +121,13 @@ function changeOffers() {
   offerDiv.style.flexDirection = "row";
 
   var offers1 = document.getElementsByClassName("hDijFX");
+  var titleDivs = document.getElementsByClassName("kjJpxs");
+
   for (var i = 0; i < offers1.length; i++) {
     offers1[i].style.width = "33%";
+    offers1[i].style.backgroundColor = "#ADD8E6";
+
+    titleDivs[i].style.color = "white";
   }
 
   //   var titleDiv = document.getElementsByClassName("kjJpxs");
@@ -130,7 +135,7 @@ function changeOffers() {
   titles[0].textContent = "Save";
   titles[1].textContent = "$" + offers[0].discount;
   titles[1].style.fontWeight = "800";
-  titles[1].style.fontSize = "50%";
+  titles[1].style.fontSize = "120%";
   titles[2].textContent = "Save";
   titles[3].textContent = "$" + offers[1].discount;
 
