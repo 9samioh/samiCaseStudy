@@ -13,7 +13,7 @@ var originalBalance;
 var originalBalanceHtml;
 var originalBalanceStyle;
 
-var originalOffer;
+var originalOffers;
 var originalOfferHtml;
 var originalOfferStyle;
 
@@ -31,8 +31,8 @@ requestAnimationFrame(() => {
 
     originalOffers = document.getElementsByClassName("fdlpQJ");
     originalOfferHtml1 = originalOffers[0].innerHTML;
-    originalOfferStyle = originalBalance[0].style.cssText;
-    originalOfferHtml2 = originalBalance[1].innerHTML;
+    originalOfferStyle = originalOffers[0].style.cssText;
+    originalOfferHtml2 = originalOffers[1].innerHTML;
 
     // setting on onClick function for the button, so we know to switch between control and test case
     var button = document.getElementsByClassName("btXcFQ")[0];
@@ -160,8 +160,8 @@ function restoreControl() {
   var originalOffers = document.getElementsByClassName("fdlpQJ");
   originalOffers[0].innerHTML = originalOfferHtml1;
   originalOffers[1].innerHTML = originalOfferHtml2;
-  originalOffer[0].style.cssText = originalOfferStyle;
-  originalOffer[1].style.cssText = originalOfferStyle;
+  originalOffers[0].style.cssText = originalOfferStyle;
+  originalOffers[1].style.cssText = originalOfferStyle;
 }
 
 // CHALLENGES :')
