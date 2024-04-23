@@ -18,7 +18,8 @@ var account = JSON.parse(accountString);
 var offers = JSON.parse(offersString);
 console.log("top account id: ", account[0].id);
 
-var ogStyle = document.getElementsByClassName("jCqiVJ")[0].style;
+var balance = document.getElementsByClassName("jCqiVJ")[0];
+var balanceStyle = balance.style.cssText;
 
 requestAnimationFrame(() => {
   // fires before next repaint
@@ -115,6 +116,6 @@ function restoreControl() {
   balanceDiv.style.display = "flex";
 
   var balance = document.getElementsByClassName("jCqiVJ")[0];
-  balance.style = ogStyle;
+  balance.style.cssText = balanceStyle;
   //   balance.style.flexDirection = "column";
 }
