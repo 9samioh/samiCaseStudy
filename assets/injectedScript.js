@@ -44,6 +44,8 @@ function swapID() {
   account = JSON.parse(accountString);
   offers = JSON.parse(offersString);
 
+  console.log("new account id: ", account[0].id);
+
   if (account[0].id % 2 == 0) {
     testChanges();
   } else {
