@@ -86,8 +86,10 @@ function changeBalance() {
   balanceDiv.style.display = "block";
 
   var balance = document.getElementsByClassName("jCqiVJ")[0];
+  console.log(balance, balance.textContent);
   balance.style.display = "flex";
-  //   balance.style.textAlign = "right";
+  balance.style.flexDirection = "row";
+  balance.style.textAlign = "right";
 }
 
 function restoreControl() {
