@@ -139,15 +139,32 @@ function changeOffers() {
   var buttons = document.getElementsByClassName("bWirkk");
 
   console.log(details);
-  for (var i = 0; i < details.length; i++) {
-    var newDetail = document.createElement("p");
-    newDetail.textContent =
-      offers[i].numOfPayments +
-      " monthly payment(s) of $" +
-      offers[i].amtPerPayment;
-    details[i].replaceWith(newDetail);
-    buttons[i].style.backgroundColor = "#a3b899";
-  }
+
+  var newDetail = document.createElement("p");
+  newDetail.textContent =
+    offers[0].numOfPayments +
+    " monthly payment(s) of $" +
+    offers[0].amtPerPayment;
+  details[0].firstChild.replaceWith(newDetail);
+  buttons[0].firstChild.style.backgroundColor = "#a3b899";
+
+  var newDetail2 = document.createElement("p");
+  newDetail2.textContent =
+    offers[1].numOfPayments +
+    " monthly payment(s) of $" +
+    offers[1].amtPerPayment;
+  details[0].lastChild.replaceWith(newDetail2);
+  buttons[0].lastChild.style.backgroundColor = "#a3b899";
+
+  //   for (var i = 0; i < details.length; i++) {
+  //     var newDetail = document.createElement("p");
+  //     newDetail.textContent =
+  //       offers[i].numOfPayments +
+  //       " monthly payment(s) of $" +
+  //       offers[i].amtPerPayment;
+  //     details[i].replaceWith(newDetail);
+  //     buttons[i].style.backgroundColor = "#a3b899";
+  //   }
 
   //   var titles = document.getElementsByClassName("kjJpxs");
   //   for (var i = 0; i < offers.length; i++) {
