@@ -87,7 +87,7 @@ function changeTitle() {
 // making change to the swap button
 function changeButton() {
   var button = document.getElementsByClassName("btXcFQ")[0];
-  button.style.backgroundColor = "#F99D34";
+  button.style.backgroundColor = "#FBBB91";
   button.textContent = "Swap IDs";
 }
 
@@ -140,27 +140,27 @@ function changeOffers() {
 
   //   console.log(details[0], details[1]);
 
-  //   var newDetail = document.createElement("p");
-  //   newDetail.textContent =
-  //     offers[0].numOfPayments +
-  //     " monthly payment(s) of $" +
-  //     offers[0].amtPerPayment;
-  //   details[0].replaceWith(newDetail);
-  //   buttons[0].style.backgroundColor = "#86B495";
+  var newDetail = document.createElement("p");
+  newDetail.textContent =
+    offers[0].numOfPayments +
+    " monthly payment(s) of $" +
+    offers[0].amtPerPayment;
+  details[0].replaceWith(newDetail);
+  buttons[0].style.backgroundColor = "#86B495";
 
-  //   var newDetail2 = document.createElement("p");
-  //   newDetail2.textContent =
-  //     offers[1].numOfPayments +
-  //     " monthly payment(s) of $" +
-  //     offers[1].amtPerPayment;
+  var newDetail2 = document.createElement("p");
+  newDetail2.textContent =
+    offers[1].numOfPayments +
+    " monthly payment(s) of $" +
+    offers[1].amtPerPayment;
 
-  //   details[1].replaceWith(newDetail);
-  //   buttons[1].style.backgroundColor = "#86B495";
+  details[0].replaceWith(newDetail);
+  buttons[1].style.backgroundColor = "#86B495";
 
-  var newParagraph = document.createElement("p");
-  newParagraph.textContent = "New content";
-  details[0].replaceWith(newParagraph.cloneNode(true));
-  console.log(details);
+  //   var newParagraph = document.createElement("p");
+  //   newParagraph.textContent = "New content";
+  //   details[0].replaceWith(newParagraph.cloneNode(true));
+  //   console.log(details);
 
   // Get all elements with the class name 'oldElements'
   // var oldElements = document.getElementsByClassName('oldElements');
