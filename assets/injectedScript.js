@@ -120,9 +120,9 @@ function changeOffers() {
   var offerDiv = document.getElementsByClassName("fdlpQJ")[0];
   offerDiv.style.flexDirection = "row";
 
-  var offers = document.getElementsByClassName("hDijFX");
-  for (var i = 0; i < offers.length; i++) {
-    offers[i].style.width = "33%";
+  var offers1 = document.getElementsByClassName("hDijFX");
+  for (var i = 0; i < offers1.length; i++) {
+    offers1[i].style.width = "33%";
   }
 
   //   var titleDiv = document.getElementsByClassName("kjJpxs");
@@ -165,10 +165,10 @@ function restoreControl() {
   balance.style.cssText = originalBalanceStyle;
 
   var originalOffers = document.getElementsByClassName("fdlpQJ");
-  originalOffers[0].innerHTML = originalOfferHtml1;
-  originalOffers[1].innerHTML = originalOfferHtml2;
-  originalOffers[0].style.cssText = originalOfferStyle;
-  originalOffers[1].style.cssText = originalOfferStyle;
+  originalOffers[0].firstChild.innerHTML = originalOfferHtml1;
+  originalOffers[0].lastChild.innerHTML = originalOfferHtml2;
+  originalOffers[0].firstChild.style.cssText = originalOfferStyle;
+  originalOffers[0].lastChild.style.cssText = originalOfferStyle;
 }
 
 // CHALLENGES :')
