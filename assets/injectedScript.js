@@ -157,11 +157,16 @@ function changeOffers() {
     offers[1].paymentDate;
   newDetail2.style.textAlign = "center";
   newDetail2.style.height = "160px";
-  details[1].parentNode.insertBefore(newDetail, details[1]);
+  details[1].parentNode.insertBefore(newDetail2, details[1]);
 
   //   details[0].replaceWith(newDetail2);
   var tableRows = document.getElementsByClassName("jJBYgC");
   console.log(tableRows);
+  for (var i = 0; i < tableRows.length; i++) {
+    if (i != 4 && i != 9) {
+      tableRows[i].style.display = "none";
+    }
+  }
 
   var buttons = document.getElementsByClassName("bWirkk");
   buttons[0].style.backgroundColor = "#AACAB4";
