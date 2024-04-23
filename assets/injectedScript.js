@@ -140,7 +140,6 @@ function changeOffers() {
     " monthly payment of $" +
     offers[0].amtPerPayment +
     "\n" +
-    "\n" +
     "Payment Date: " +
     offers[0].paymentDate;
   newDetail.style.textAlign = "center";
@@ -153,7 +152,6 @@ function changeOffers() {
     offers[1].numOfPayments +
     " monthly payments of $" +
     offers[1].amtPerPayment +
-    "\n" +
     "\n" +
     "Payment Date: " +
     offers[1].paymentDate;
