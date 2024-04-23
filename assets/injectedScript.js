@@ -87,9 +87,10 @@ function changeBalance() {
 
   var balance = document.getElementsByClassName("jCqiVJ")[0];
   console.log(balance, balance.textContent);
-  balance.style.display = "flex";
+  balance.style.textContent = "Balance $" + account[0].balance;
+  //   balance.style.display = "flex";
   balance.style.flexDirection = "row";
-  balance.style.textAlign = "right";
+  balance.style.float = "right";
 }
 
 function restoreControl() {
@@ -110,5 +111,5 @@ function restoreControl() {
   balanceDiv.style.display = "flex";
 
   var balance = document.getElementsByClassName("jCqiVJ")[0];
-  balance.style.display = "block";
+  balance.style.flexDirection = "column";
 }
