@@ -14,7 +14,8 @@ var originalBalanceHtml;
 var originalBalanceStyle;
 
 var originalOffers;
-var originalOfferHtml;
+var originalOfferHtml1;
+var originalOfferHtml2;
 var originalOfferStyle;
 
 // this was a workaround for waiting until the dom is fully loaded before accessing elements
@@ -31,8 +32,8 @@ requestAnimationFrame(() => {
 
     originalOffers = document.getElementsByClassName("fdlpQJ");
     originalOfferHtml1 = originalOffers[0].innerHTML;
-    originalOfferStyle = originalOffers[0].style.cssText;
     originalOfferHtml2 = originalOffers[1].innerHTML;
+    originalOfferStyle = originalOffers[0].style.cssText;
 
     // setting on onClick function for the button, so we know to switch between control and test case
     var button = document.getElementsByClassName("btXcFQ")[0];
