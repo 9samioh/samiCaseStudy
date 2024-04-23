@@ -31,6 +31,7 @@ requestAnimationFrame(() => {
     originalBalanceStyle = originalBalance.style.cssText;
 
     originalOffers = document.getElementsByClassName("fdlpQJ");
+    console.log(originalOffers);
     originalOfferHtml1 = originalOffers[0].innerHTML;
     originalOfferHtml2 = originalOffers[1].innerHTML;
     originalOfferStyle = originalOffers[0].style.cssText;
