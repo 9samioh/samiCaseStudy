@@ -18,6 +18,8 @@ var originalOfferHtml1;
 var originalOfferHtml2;
 var originalOfferStyle;
 
+console.log("hello");
+
 // this was a workaround for waiting until the dom is fully loaded before accessing elements
 
 // fires before next repaint
@@ -138,9 +140,10 @@ function changeOffers() {
     offers[0].numOfPayments +
     " monthly payment of $" +
     offers[0].amtPerPayment +
-    "\n" +
+    "\n\n" +
     "Payment Date: " +
     offers[0].paymentDate;
+  newDetail.style.whiteSpace = "pre-line";
   newDetail.style.textAlign = "center";
   newDetail.style.height = "160px";
 
@@ -151,9 +154,10 @@ function changeOffers() {
     offers[1].numOfPayments +
     " monthly payments of $" +
     offers[1].amtPerPayment +
-    "\n" +
+    "\n\n" +
     "Payment Date: " +
     offers[1].paymentDate;
+  newDetail2.style.whiteSpace = "pre-line";
   newDetail2.style.textAlign = "center";
   newDetail2.style.height = "160px";
 
