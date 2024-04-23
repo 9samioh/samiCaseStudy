@@ -36,13 +36,17 @@ requestAnimationFrame(() => {
 function swapID() {
   console.log("swapping ids");
 
-  // retrieving string representations of local storage
-  accountString = localStorage.getItem("acctInfo");
-  offersString = localStorage.getItem("offers");
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      // retrieving string representations of local storage
+      accountString = localStorage.getItem("acctInfo");
+      offersString = localStorage.getItem("offers");
 
-  // parsing the string to a JSON object
-  account = JSON.parse(accountString);
-  offers = JSON.parse(offersString);
+      // parsing the string to a JSON object
+      account = JSON.parse(accountString);
+      offers = JSON.parse(offersString);
+    });
+  });
 
   console.log("new account id: ", account[0].id);
 
