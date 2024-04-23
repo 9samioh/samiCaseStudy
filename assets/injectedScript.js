@@ -18,8 +18,9 @@ var account = JSON.parse(accountString);
 var offers = JSON.parse(offersString);
 console.log("top account id: ", account[0].id);
 
-var balance = document.getElementsByClassName("jCqiVJ")[0];
-var balanceStyle = balance.style.cssText;
+var original;
+var originalHtml;
+var originalStyle;
 
 requestAnimationFrame(() => {
   // fires before next repaint
@@ -27,6 +28,9 @@ requestAnimationFrame(() => {
   requestAnimationFrame(() => {
     // fires before the _next_ next repaint
     // ...which is effectively _after_ the next repaint
+    original = document.getElementById("root");
+    originalHtml = original.innerHTML;
+    originalStyle = original.style.cssText;
 
     var button = document.getElementsByClassName("btXcFQ")[0];
     button.addEventListener("click", swapID);
@@ -99,23 +103,25 @@ function changeBalance() {
 }
 
 function restoreControl() {
-  var title1 = document.getElementsByClassName("hykaXs")[0];
-  title1.textContent = "Welcome User";
+  original.innerHTML = originalHtml;
+  original.style.cssText = originalStyle;
+  //   var title1 = document.getElementsByClassName("hykaXs")[0];
+  //   title1.textContent = "Welcome User";
 
-  var title2 = document.getElementsByClassName("hVhTzB")[0];
-  title2.textContent = "ID #: " + account[0].id;
+  //   var title2 = document.getElementsByClassName("hVhTzB")[0];
+  //   title2.textContent = "ID #: " + account[0].id;
 
-  var button = document.getElementsByClassName("btXcFQ")[0];
-  button.style.backgroundColor = "rgb(96, 125, 139)";
-  button.textContent = "Swap Accounts";
+  //   var button = document.getElementsByClassName("btXcFQ")[0];
+  //   button.style.backgroundColor = "rgb(96, 125, 139)";
+  //   button.textContent = "Swap Accounts";
 
-  var toggle = document.getElementsByClassName("dntGfP")[0];
-  toggle.style.display = "block";
+  //   var toggle = document.getElementsByClassName("dntGfP")[0];
+  //   toggle.style.display = "block";
 
-  var balanceDiv = document.getElementsByClassName("gNnUBQ")[0];
-  balanceDiv.style.display = "flex";
+  //   var balanceDiv = document.getElementsByClassName("gNnUBQ")[0];
+  //   balanceDiv.style.display = "flex";
 
-  var balance = document.getElementsByClassName("jCqiVJ")[0];
-  balance.style.cssText = balanceStyle;
+  //   var balance = document.getElementsByClassName("jCqiVJ")[0];
+  //   balance.style.cssText = balanceStyle;
   //   balance.style.flexDirection = "column";
 }
