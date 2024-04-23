@@ -119,7 +119,7 @@ function changeOffers() {
 
   for (var i = 0; i < offers1.length; i++) {
     offers1[i].style.width = "33%";
-    offers1[i].style.backgroundColor = "#DEEBF1";
+    offers1[i].style.backgroundColor = "#CAE2EC";
 
     titleDivs[i].style.color = "white";
   }
@@ -153,7 +153,8 @@ function changeOffers() {
     offers[1].numOfPayments +
     " monthly payment(s) of $" +
     offers[1].amtPerPayment;
-  details[1].replaceWith(newDetail2);
+
+  details[1].replaceWith(newDetail);
   buttons[1].style.backgroundColor = "#86B495";
 
   //   for (var i = 0; i < details.length; i++) {
