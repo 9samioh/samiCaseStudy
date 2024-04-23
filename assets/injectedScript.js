@@ -31,9 +31,14 @@ requestAnimationFrame(() => {
     originalBalanceStyle = originalBalance.style.cssText;
 
     originalOffers = document.getElementsByClassName("fdlpQJ");
-    console.log(originalOffers);
-    originalOfferHtml1 = originalOffers[0].innerHTML;
-    originalOfferHtml2 = originalOffers[1].innerHTML;
+    console.log(
+      originalOffers,
+      originalOffers[0].firstChild,
+      originalOffers[0].firstChild,
+      originalOffers[0]
+    );
+    originalOfferHtml1 = originalOffers[0].firstChild.innerHTML;
+    originalOfferHtml2 = originalOffers[0].firstChild.innerHTML;
     originalOfferStyle = originalOffers[0].style.cssText;
 
     // setting on onClick function for the button, so we know to switch between control and test case
