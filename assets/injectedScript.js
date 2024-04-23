@@ -31,14 +31,8 @@ requestAnimationFrame(() => {
     originalBalanceStyle = originalBalance.style.cssText;
 
     originalOffers = document.getElementsByClassName("fdlpQJ");
-    console.log(
-      originalOffers,
-      originalOffers[0].firstChild,
-      originalOffers[0].firstChild,
-      originalOffers[0]
-    );
     originalOfferHtml1 = originalOffers[0].firstChild.innerHTML;
-    originalOfferHtml2 = originalOffers[0].firstChild.innerHTML;
+    originalOfferHtml2 = originalOffers[0].lastChild.innerHTML;
     originalOfferStyle = originalOffers[0].style.cssText;
 
     // setting on onClick function for the button, so we know to switch between control and test case
@@ -138,6 +132,8 @@ function changeOffers() {
   titles[1].style.fontSize = "120%";
   titles[2].textContent = "Save";
   titles[3].textContent = "$" + offers[1].discount;
+  titles[3].style.fontWeight = "800";
+  titles[3].style.fontSize = "120%";
 
   //   var titles = document.getElementsByClassName("kjJpxs");
   //   for (var i = 0; i < offers.length; i++) {
