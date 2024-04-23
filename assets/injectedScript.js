@@ -120,19 +120,20 @@ function changeOffers() {
   for (var i = 0; i < offers1.length; i++) {
     offers1[i].style.width = "33%";
     offers1[i].style.backgroundColor = "#CAE2EC";
-
+    offers1[i].style.fontWeight = "800";
+    offers[i].style.fontSize = "120%";
     titleDivs[i].style.color = "white";
   }
 
   var titles = document.getElementsByClassName("gBZWha");
   titles[0].textContent = "Save";
   titles[1].textContent = "$" + offers[0].discount;
-  titles[1].style.fontWeight = "800";
-  titles[1].style.fontSize = "120%";
+  //   titles[1].style.fontWeight = "800";
+  //   titles[1].style.fontSize = "120%";
   titles[2].textContent = "Save";
   titles[3].textContent = "$" + offers[1].discount;
-  titles[3].style.fontWeight = "800";
-  titles[3].style.fontSize = "120%";
+  //   titles[3].style.fontWeight = "800";
+  //   titles[3].style.fontSize = "120%";
 
   var details = document.getElementsByClassName("impyGL");
   var buttons = document.getElementsByClassName("bWirkk");
