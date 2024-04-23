@@ -159,17 +159,19 @@ function changeOffers() {
 
   var newParagraph = document.createElement("p");
   newParagraph.textContent = "New content";
+  details[0].replaceWith(newParagraph.cloneNode(true));
+  console.log(details);
 
   // Get all elements with the class name 'oldElements'
   // var oldElements = document.getElementsByClassName('oldElements');
 
   // Iterate over all elements with the class name 'oldElements'
-  for (var i = 0; i < details.length; i++) {
-    var oldElement = details[i];
+  //   for (var i = 0; i < details.length; i++) {
+  //     var oldElement = details[i];
 
-    // Replace each old element with the new paragraph element
-    oldElement.replaceWith(newParagraph.cloneNode(true));
-  }
+  //     // Replace each old element with the new paragraph element
+  //     oldElement.replaceWith(newParagraph.cloneNode(true));
+  //   }
 
   //   for (var i = 0; i < details.length; i++) {
   //     var newDetail = document.createElement("p");
