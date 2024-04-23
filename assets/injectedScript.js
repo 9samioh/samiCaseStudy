@@ -16,6 +16,7 @@ var offersString = localStorage.getItem("offers");
 // parsing the string to a JSON object
 var account = JSON.parse(accountString);
 var offers = JSON.parse(offersString);
+console.log("top account id: ", account[0].id);
 
 requestAnimationFrame(() => {
   // fires before next repaint
@@ -38,23 +39,18 @@ function swapID() {
 
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
-      // retrieving string representations of local storage
       accountString = localStorage.getItem("acctInfo");
-      offersString = localStorage.getItem("offers");
-
-      // parsing the string to a JSON object
       account = JSON.parse(accountString);
-      offers = JSON.parse(offersString);
+
+      console.log("new account id: ", account[0].id);
+
+      if (account[0].id % 2 == 0) {
+        testChanges();
+      } else {
+        restoreControl();
+      }
     });
   });
-
-  console.log("new account id: ", account[0].id);
-
-  if (account[0].id % 2 == 0) {
-    testChanges();
-  } else {
-    restoreControl();
-  }
 }
 
 function testChanges() {
