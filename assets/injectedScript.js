@@ -57,15 +57,16 @@ function testChanges() {
   if (window.innerWidth < 500) {
     changeTitle();
     changeButton();
+    hideToggle();
   }
 }
 
 function restoreControl() {
-  var title1 = document.getElementsByClassName("hykaXs");
-  title1[0].textContent = "Welcome User";
+  var title1 = document.getElementsByClassName("hykaXs")[0];
+  title1.textContent = "Welcome User";
 
-  var title2 = document.getElementsByClassName("hVhTzB");
-  title2[0].textContent = "ID #: " + account[0].id;
+  var title2 = document.getElementsByClassName("hVhTzB")[0];
+  title2.textContent = "ID #: " + account[0].id;
 
   var button = document.getElementsByClassName("btXcFQ")[0];
   button.style.backgroundColor = "rgb(96, 125, 139)";
@@ -73,11 +74,11 @@ function restoreControl() {
 }
 
 function changeTitle() {
-  var title1 = document.getElementsByClassName("hykaXs");
-  title1[0].textContent = "";
+  var title1 = document.getElementsByClassName("hykaXs")[0];
+  title1.textContent = "";
 
-  var title2 = document.getElementsByClassName("hVhTzB");
-  title2[0].textContent = "User ID: #" + account[0].id;
+  var title2 = document.getElementsByClassName("hVhTzB")[0];
+  title2.textContent = "User ID: #" + account[0].id;
 }
 
 function changeButton() {
@@ -85,4 +86,9 @@ function changeButton() {
   var button = document.getElementsByClassName("btXcFQ")[0];
   button.style.backgroundColor = "#FFA500";
   button.textContent = "Swap IDs";
+}
+
+function hideToggle() {
+  var toggle = document.getElementsByClassName("dntGfP")[0];
+  toggle.style.display = "none";
 }
