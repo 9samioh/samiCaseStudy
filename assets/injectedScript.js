@@ -128,20 +128,23 @@ function changeOffers() {
   var titles = document.getElementsByClassName("gBZWha");
   titles[0].textContent = "Save";
   titles[1].textContent = "$" + offers[0].discount;
-  //   titles[1].style.fontWeight = "800";
-  //   titles[1].style.fontSize = "120%";
   titles[2].textContent = "Save";
   titles[3].textContent = "$" + offers[1].discount;
-  //   titles[3].style.fontWeight = "800";
-  //   titles[3].style.fontSize = "120%";
 
   var details = document.getElementsByClassName("impyGL");
   var buttons = document.getElementsByClassName("bWirkk");
 
   var newDetail = document.createElement("p");
   newDetail.textContent =
-    offers[0].numOfPayments + " monthly payment of $" + offers[0].amtPerPayment;
+    offers[0].numOfPayments +
+    " monthly payment of $" +
+    offers[0].amtPerPayment +
+    "\n" +
+    "Payment Date: " +
+    offers[0].paymentDate;
   newDetail.style.textAlign = "center";
+  newDetail.style.height = "80px";
+
   details[0].replaceWith(newDetail);
   buttons[0].style.backgroundColor = "#AACAB4";
 
@@ -149,8 +152,13 @@ function changeOffers() {
   newDetail2.textContent =
     offers[1].numOfPayments +
     " monthly payments of $" +
-    offers[1].amtPerPayment;
+    offers[1].amtPerPayment +
+    "\n" +
+    "Payment Date: " +
+    offers[1].paymentDate;
   newDetail2.style.textAlign = "center";
+  newDetail2.style.height = "80px";
+
   details[0].replaceWith(newDetail2);
   buttons[1].style.backgroundColor = "#AACAB4";
 }
