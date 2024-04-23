@@ -27,3 +27,12 @@
      changeButton();
    }
  }, 1000); // Wait for 1 second before executing
+
+
+ THINGS I LEARNED!!!
+ - how to deploy through multiple services! github pages, aws, netlify
+ - how to target elements in a dom
+ - how to disable coors (maybe)
+ - injecting js into an html document
+ - sososo much practice with devtools
+ - how to access data on the local storage & how it's stored
