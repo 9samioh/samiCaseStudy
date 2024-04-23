@@ -132,7 +132,6 @@ function changeOffers() {
   titles[3].textContent = "$" + offers[1].discount;
 
   var details = document.getElementsByClassName("impyGL");
-  //   var parent = details.parentNode;
 
   var newDetail = document.createElement("p");
   newDetail.textContent =
@@ -144,8 +143,8 @@ function changeOffers() {
     offers[0].paymentDate;
   newDetail.style.textAlign = "center";
   newDetail.style.height = "160px";
-  details[0].parentNode.insertBefore(newDetail, details[0]);
-  //   details[0].replaceWith(newDetail);
+
+  details[0].replaceWith(newDetail);
 
   var newDetail2 = document.createElement("p");
   newDetail2.textContent =
@@ -157,16 +156,8 @@ function changeOffers() {
     offers[1].paymentDate;
   newDetail2.style.textAlign = "center";
   newDetail2.style.height = "160px";
-  details[1].parentNode.insertBefore(newDetail2, details[1]);
 
-  //   details[0].replaceWith(newDetail2);
-  var tableRows = document.getElementsByClassName("jJBYgC");
-  console.log(tableRows);
-  for (var i = 0; i < tableRows.length; i++) {
-    if (i != 4 && i != 9) {
-      tableRows[i].style.display = "none";
-    }
-  }
+  details[0].replaceWith(newDetail2);
 
   var buttons = document.getElementsByClassName("bWirkk");
   buttons[0].style.backgroundColor = "#AACAB4";
