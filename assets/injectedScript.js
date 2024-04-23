@@ -124,7 +124,6 @@ function changeOffers() {
     titleDivs[i].style.color = "white";
   }
 
-  //   var titleDiv = document.getElementsByClassName("kjJpxs");
   var titles = document.getElementsByClassName("gBZWha");
   titles[0].textContent = "Save";
   titles[1].textContent = "$" + offers[0].discount;
@@ -138,68 +137,23 @@ function changeOffers() {
   var details = document.getElementsByClassName("impyGL");
   var buttons = document.getElementsByClassName("bWirkk");
 
-  //   console.log(details[0], details[1]);
+  var newDetail = document.createElement("p");
+  newDetail.textContent =
+    offers[0].numOfPayments +
+    " monthly payment(s) of $" +
+    offers[0].amtPerPayment;
+  newDetail.style.textAlign = "center";
+  details[0].replaceWith(newDetail);
+  buttons[0].style.backgroundColor = "#AACAB4";
 
-  for (var i = 0; i < details.length; i++) {
-    var newDetail = document.createElement("p");
-    newDetail.textContent =
-      offers[i].numOfPayments +
-      " monthly payment(s) of $" +
-      offers[i].amtPerPayment;
-    newDetail.style.textAlign = "center";
-
-    details[0].replaceWith(newDetail);
-    buttons[i].style.backgroundColor = "#AACAB4";
-  }
-
-  //   var newDetail = document.createElement("p");
-  //   newDetail.textContent =
-  //     offers[0].numOfPayments +
-  //     " monthly payment(s) of $" +
-  //     offers[0].amtPerPayment;
-  //   details[0].replaceWith(newDetail);
-  //   buttons[0].style.backgroundColor = "#AACAB4";
-
-  //   var newDetail2 = document.createElement("p");
-  //   newDetail2.textContent =
-  //     offers[1].numOfPayments +
-  //     " monthly payment(s) of $" +
-  //     offers[1].amtPerPayment;
-
-  //   details[0].replaceWith(newDetail2);
-  //   buttons[1].style.backgroundColor = "#AACAB4";
-
-  //   var newParagraph = document.createElement("p");
-  //   newParagraph.textContent = "New content";
-  //   details[0].replaceWith(newParagraph.cloneNode(true));
-  //   console.log(details);
-
-  // Get all elements with the class name 'oldElements'
-  // var oldElements = document.getElementsByClassName('oldElements');
-
-  // Iterate over all elements with the class name 'oldElements'
-  //   for (var i = 0; i < details.length; i++) {
-  //     var oldElement = details[i];
-
-  //     // Replace each old element with the new paragraph element
-  //     oldElement.replaceWith(newParagraph.cloneNode(true));
-  //   }
-
-  //   for (var i = 0; i < details.length; i++) {
-  //     var newDetail = document.createElement("p");
-  //     newDetail.textContent =
-  //       offers[i].numOfPayments +
-  //       " monthly payment(s) of $" +
-  //       offers[i].amtPerPayment;
-  //     details[i].replaceWith(newDetail);
-  //     buttons[i].style.backgroundColor = "#a3b899";
-  //   }
-
-  //   var titles = document.getElementsByClassName("kjJpxs");
-  //   for (var i = 0; i < offers.length; i++) {
-  //     offers[i].textContent = ;
-  //   }
-  //   console.log(titles);
+  var newDetail2 = document.createElement("p");
+  newDetail2.textContent =
+    offers[1].numOfPayments +
+    " monthly payment(s) of $" +
+    offers[1].amtPerPayment;
+  newDetail2.style.textAlign = "center";
+  details[0].replaceWith(newDetail2);
+  buttons[1].style.backgroundColor = "#AACAB4";
 }
 
 // restoring original styling for control
