@@ -135,6 +135,14 @@ function changeOffers() {
   titles[3].style.fontWeight = "800";
   titles[3].style.fontSize = "120%";
 
+  var details = document.getElementsByClassName("impyGL");
+
+  for (var i = 0; i < details.length; i++) {
+    var newDetail = document.createElement("p");
+    newDetail.textContent = "monthly payments";
+    details[i].replaceWith(newDetail);
+  }
+
   //   var titles = document.getElementsByClassName("kjJpxs");
   //   for (var i = 0; i < offers.length; i++) {
   //     offers[i].textContent = ;
