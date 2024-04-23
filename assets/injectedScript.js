@@ -82,9 +82,12 @@ function hideToggle() {
 }
 
 function changeBalance() {
+  var balanceDiv = document.getElementsByClassName("gNnUBQ")[0];
+  balanceDiv.style.display = "block";
+
   var balance = document.getElementsByClassName("jCqiVJ")[0];
-  balance.style.display = "block";
-  balance.style.textAlign = "right";
+  balance.style.display = "flex";
+  //   balance.style.textAlign = "right";
 }
 
 function restoreControl() {
@@ -101,6 +104,9 @@ function restoreControl() {
   var toggle = document.getElementsByClassName("dntGfP")[0];
   toggle.style.display = "block";
 
+  var balanceDiv = document.getElementsByClassName("gNnUBQ")[0];
+  balanceDiv.style.display = "flex";
+
   var balance = document.getElementsByClassName("jCqiVJ")[0];
-  balance.style.display = "flex";
+  balance.style.display = "block";
 }
