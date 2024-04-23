@@ -13,6 +13,10 @@ var originalBalance;
 var originalBalanceHtml;
 var originalBalanceStyle;
 
+var originalOffer;
+var originalOfferHtml;
+var originalOfferStyle;
+
 // this was a workaround for waiting until the dom is fully loaded before accessing elements
 
 // fires before next repaint
@@ -24,6 +28,11 @@ requestAnimationFrame(() => {
     originalBalance = document.getElementsByClassName("jCqiVJ")[0];
     originalBalanceHtml = originalBalance.innerHTML;
     originalBalanceStyle = originalBalance.style.cssText;
+
+    originalOffers = document.getElementsByClassName("fdlpQJ");
+    originalOfferHtml1 = originalOffers[0].innerHTML;
+    originalOfferStyle = originalBalance[0].style.cssText;
+    originalOfferHtml2 = originalBalance[1].innerHTML;
 
     // setting on onClick function for the button, so we know to switch between control and test case
     var button = document.getElementsByClassName("btXcFQ")[0];
@@ -111,6 +120,11 @@ function changeOffers() {
 
   //   var titleDiv = document.getElementsByClassName("kjJpxs");
   var titles = document.getElementsByClassName("gBZWha");
+  titles[0].textContent = "Save";
+  titles[1].textContent = "$" + offers[0].discount;
+  titles[2].textContent = "Save";
+  titles[3].textContent = "$" + offers[1].discount;
+
   //   var titles = document.getElementsByClassName("kjJpxs");
   //   for (var i = 0; i < offers.length; i++) {
   //     offers[i].textContent = ;
@@ -142,6 +156,12 @@ function restoreControl() {
   var balance = document.getElementsByClassName("jCqiVJ")[0];
   balance.innerHTML = originalBalanceHtml;
   balance.style.cssText = originalBalanceStyle;
+
+  var originalOffers = document.getElementsByClassName("fdlpQJ");
+  originalOffers[0].innerHTML = originalOfferHtml1;
+  originalOffers[1].innerHTML = originalOfferHtml2;
+  originalOffer[0].style.cssText = originalOfferStyle;
+  originalOffer[1].style.cssText = originalOfferStyle;
 }
 
 // CHALLENGES :')
