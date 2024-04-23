@@ -58,7 +58,33 @@ function testChanges() {
     changeTitle();
     changeButton();
     hideToggle();
+    changeBalance();
   }
+}
+
+function changeTitle() {
+  var title1 = document.getElementsByClassName("hykaXs")[0];
+  title1.textContent = "";
+
+  var title2 = document.getElementsByClassName("hVhTzB")[0];
+  title2.textContent = "User ID: #" + account[0].id;
+}
+
+function changeButton() {
+  var button = document.getElementsByClassName("btXcFQ")[0];
+  button.style.backgroundColor = "#FFA500";
+  button.textContent = "Swap IDs";
+}
+
+function hideToggle() {
+  var toggle = document.getElementsByClassName("dntGfP")[0];
+  toggle.style.display = "none";
+}
+
+function changeBalance() {
+  var balance = document.getElementsByClassName("jCqiVJ")[0];
+  balance.style.display = "block";
+  balance.style.textAlign = "right";
 }
 
 function restoreControl() {
@@ -71,24 +97,10 @@ function restoreControl() {
   var button = document.getElementsByClassName("btXcFQ")[0];
   button.style.backgroundColor = "rgb(96, 125, 139)";
   button.textContent = "Swap Accounts";
-}
 
-function changeTitle() {
-  var title1 = document.getElementsByClassName("hykaXs")[0];
-  title1.textContent = "";
-
-  var title2 = document.getElementsByClassName("hVhTzB")[0];
-  title2.textContent = "User ID: #" + account[0].id;
-}
-
-function changeButton() {
-  //   console.log(account, offers);
-  var button = document.getElementsByClassName("btXcFQ")[0];
-  button.style.backgroundColor = "#FFA500";
-  button.textContent = "Swap IDs";
-}
-
-function hideToggle() {
   var toggle = document.getElementsByClassName("dntGfP")[0];
-  toggle.style.display = "none";
+  toggle.style.display = "block";
+
+  var balance = document.getElementsByClassName("jCqiVJ")[0];
+  balance.style.display = "flex";
 }
