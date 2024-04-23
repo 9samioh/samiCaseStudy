@@ -138,24 +138,38 @@ function changeOffers() {
   var details = document.getElementsByClassName("impyGL");
   var buttons = document.getElementsByClassName("bWirkk");
 
-  console.log(details[0], details[1]);
+  //   console.log(details[0], details[1]);
 
-  var newDetail = document.createElement("p");
-  newDetail.textContent =
-    offers[0].numOfPayments +
-    " monthly payment(s) of $" +
-    offers[0].amtPerPayment;
-  details[0].replaceWith(newDetail);
-  buttons[0].style.backgroundColor = "#86B495";
+  //   var newDetail = document.createElement("p");
+  //   newDetail.textContent =
+  //     offers[0].numOfPayments +
+  //     " monthly payment(s) of $" +
+  //     offers[0].amtPerPayment;
+  //   details[0].replaceWith(newDetail);
+  //   buttons[0].style.backgroundColor = "#86B495";
 
-  var newDetail2 = document.createElement("p");
-  newDetail2.textContent =
-    offers[1].numOfPayments +
-    " monthly payment(s) of $" +
-    offers[1].amtPerPayment;
+  //   var newDetail2 = document.createElement("p");
+  //   newDetail2.textContent =
+  //     offers[1].numOfPayments +
+  //     " monthly payment(s) of $" +
+  //     offers[1].amtPerPayment;
 
-  details[1].replaceWith(newDetail);
-  buttons[1].style.backgroundColor = "#86B495";
+  //   details[1].replaceWith(newDetail);
+  //   buttons[1].style.backgroundColor = "#86B495";
+
+  var newParagraph = document.createElement("p");
+  newParagraph.textContent = "New content";
+
+  // Get all elements with the class name 'oldElements'
+  // var oldElements = document.getElementsByClassName('oldElements');
+
+  // Iterate over all elements with the class name 'oldElements'
+  for (var i = 0; i < details.length; i++) {
+    var oldElement = details[i];
+
+    // Replace each old element with the new paragraph element
+    oldElement.replaceWith(newParagraph.cloneNode(true));
+  }
 
   //   for (var i = 0; i < details.length; i++) {
   //     var newDetail = document.createElement("p");
