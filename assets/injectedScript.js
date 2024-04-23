@@ -120,8 +120,8 @@ function changeOffers() {
   for (var i = 0; i < offers1.length; i++) {
     offers1[i].style.width = "33%";
     offers1[i].style.backgroundColor = "#CAE2EC";
-    offers1[i].style.fontWeight = "800";
-    offers[i].style.fontSize = "120%";
+    titleDivs[i].style.fontWeight = "800";
+    titleDivs[i].style.fontSize = "120%";
     titleDivs[i].style.color = "white";
   }
 
