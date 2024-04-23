@@ -140,10 +140,11 @@ function changeOffers() {
     " monthly payment of $" +
     offers[0].amtPerPayment +
     "\n" +
+    "\n" +
     "Payment Date: " +
     offers[0].paymentDate;
   newDetail.style.textAlign = "center";
-  newDetail.style.height = "80px";
+  newDetail.style.height = "160px";
 
   details[0].replaceWith(newDetail);
   buttons[0].style.backgroundColor = "#AACAB4";
@@ -154,10 +155,11 @@ function changeOffers() {
     " monthly payments of $" +
     offers[1].amtPerPayment +
     "\n" +
+    "\n" +
     "Payment Date: " +
     offers[1].paymentDate;
   newDetail2.style.textAlign = "center";
-  newDetail2.style.height = "80px";
+  newDetail2.style.height = "160px";
 
   details[0].replaceWith(newDetail2);
   buttons[1].style.backgroundColor = "#AACAB4";
