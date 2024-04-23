@@ -105,6 +105,9 @@ function changeBalance() {
 function restoreControl() {
   original.innerHTML = originalHtml;
   original.style.cssText = originalStyle;
+
+  var button = document.getElementsByClassName("btXcFQ")[0];
+  button.addEventListener("click", swapID);
   //   var title1 = document.getElementsByClassName("hykaXs")[0];
   //   title1.textContent = "Welcome User";
 
