@@ -136,18 +136,24 @@ function changeOffers() {
   titles[3].style.fontSize = "120%";
 
   var details = document.getElementsByClassName("impyGL");
+  var buttons = document.getElementsByClassName("bWirkk");
 
+  console.log(details);
   for (var i = 0; i < details.length; i++) {
     var newDetail = document.createElement("p");
-    newDetail.textContent = "monthly payments";
+    newDetail.textContent =
+      offers[i].numOfPayments +
+      " monthly payment(s) of $" +
+      offers[i].amtPerPayment;
     details[i].replaceWith(newDetail);
+    buttons[i].style.backgroundColor = "#a3b899";
   }
 
   //   var titles = document.getElementsByClassName("kjJpxs");
   //   for (var i = 0; i < offers.length; i++) {
   //     offers[i].textContent = ;
   //   }
-  console.log(titles);
+  //   console.log(titles);
 }
 
 // restoring original styling for control
