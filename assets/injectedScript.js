@@ -140,22 +140,34 @@ function changeOffers() {
 
   //   console.log(details[0], details[1]);
 
-  var newDetail = document.createElement("p");
-  newDetail.textContent =
-    offers[0].numOfPayments +
-    " monthly payment(s) of $" +
-    offers[0].amtPerPayment;
-  details[0].replaceWith(newDetail);
-  buttons[0].style.backgroundColor = "#AACAB4";
+  for (var i = 0; i < details.length; i++) {
+    var newDetail = document.createElement("p");
+    newDetail.textContent =
+      offers[i].numOfPayments +
+      " monthly payment(s) of $" +
+      offers[i].amtPerPayment;
+    newDetail.style.textAlign = "center";
 
-  var newDetail2 = document.createElement("p");
-  newDetail2.textContent =
-    offers[1].numOfPayments +
-    " monthly payment(s) of $" +
-    offers[1].amtPerPayment;
+    details[0].replaceWith(newDetail);
+    buttons[i].style.backgroundColor = "#AACAB4";
+  }
 
-  details[0].replaceWith(newDetail2);
-  buttons[1].style.backgroundColor = "#AACAB4";
+  //   var newDetail = document.createElement("p");
+  //   newDetail.textContent =
+  //     offers[0].numOfPayments +
+  //     " monthly payment(s) of $" +
+  //     offers[0].amtPerPayment;
+  //   details[0].replaceWith(newDetail);
+  //   buttons[0].style.backgroundColor = "#AACAB4";
+
+  //   var newDetail2 = document.createElement("p");
+  //   newDetail2.textContent =
+  //     offers[1].numOfPayments +
+  //     " monthly payment(s) of $" +
+  //     offers[1].amtPerPayment;
+
+  //   details[0].replaceWith(newDetail2);
+  //   buttons[1].style.backgroundColor = "#AACAB4";
 
   //   var newParagraph = document.createElement("p");
   //   newParagraph.textContent = "New content";
