@@ -139,9 +139,7 @@ function changeOffers() {
 
   var newDetail = document.createElement("p");
   newDetail.textContent =
-    offers[0].numOfPayments +
-    " monthly payment(s) of $" +
-    offers[0].amtPerPayment;
+    offers[0].numOfPayments + " monthly payment of $" + offers[0].amtPerPayment;
   newDetail.style.textAlign = "center";
   details[0].replaceWith(newDetail);
   buttons[0].style.backgroundColor = "#AACAB4";
@@ -149,7 +147,7 @@ function changeOffers() {
   var newDetail2 = document.createElement("p");
   newDetail2.textContent =
     offers[1].numOfPayments +
-    " monthly payment(s) of $" +
+    " monthly payments of $" +
     offers[1].amtPerPayment;
   newDetail2.style.textAlign = "center";
   details[0].replaceWith(newDetail2);
