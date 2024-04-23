@@ -129,6 +129,8 @@ function changeOffers() {
   var titles = document.getElementsByClassName("gBZWha");
   titles[0].textContent = "Save";
   titles[1].textContent = "$" + offers[0].discount;
+  titles[1].style.fontWeight = "800";
+  titles[1].style.fontSize = "50%";
   titles[2].textContent = "Save";
   titles[3].textContent = "$" + offers[1].discount;
 
@@ -163,6 +165,9 @@ function restoreControl() {
   var balance = document.getElementsByClassName("jCqiVJ")[0];
   balance.innerHTML = originalBalanceHtml;
   balance.style.cssText = originalBalanceStyle;
+
+  var offerDiv = document.getElementsByClassName("fdlpQJ")[0];
+  offerDiv.style.flexDirection = "column";
 
   var originalOffers = document.getElementsByClassName("fdlpQJ");
   originalOffers[0].firstChild.innerHTML = originalOfferHtml1;
