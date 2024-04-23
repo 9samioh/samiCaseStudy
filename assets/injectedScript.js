@@ -146,7 +146,7 @@ function changeOffers() {
     " monthly payment(s) of $" +
     offers[0].amtPerPayment;
   details[0].replaceWith(newDetail);
-  buttons[0].style.backgroundColor = "#86B495";
+  buttons[0].style.backgroundColor = "#AACAB4";
 
   var newDetail2 = document.createElement("p");
   newDetail2.textContent =
@@ -154,8 +154,8 @@ function changeOffers() {
     " monthly payment(s) of $" +
     offers[1].amtPerPayment;
 
-  details[0].replaceWith(newDetail);
-  buttons[1].style.backgroundColor = "#86B495";
+  details[0].replaceWith(newDetail2);
+  buttons[1].style.backgroundColor = "#AACAB4";
 
   //   var newParagraph = document.createElement("p");
   //   newParagraph.textContent = "New content";
